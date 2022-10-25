@@ -1,13 +1,14 @@
 import { EthProvider } from "./contexts/EthContext";
-import Footer from "./components/Footer";
 import "./App.css";
-
+import PetContainer from "./components/Container";
+import pets from './data';
 function App() {
   return (
     <EthProvider>
       <div id="App" >
         <div className="container">
-          <Footer />
+          <h1 style={{ textAlign: "center" }}>PetShop</h1>
+          <PetContainer pets={pets} />
         </div>
       </div>
     </EthProvider>
