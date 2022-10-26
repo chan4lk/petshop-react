@@ -1,6 +1,7 @@
 import PetCard from "./PetCard";
 import useEth from "../contexts/EthContext/useEth";
 import { useEffect, useState } from "react";
+import { Spinner } from "reactstrap";
 
 export default function PetContainer({ pets }) {
     const {
@@ -35,7 +36,7 @@ export default function PetContainer({ pets }) {
     return <>
         {artifact ? <></> : <span>No artifact deployed.</span>}
         {
-            loading ? <div>Loading</div> :
+            loading ? <Spinner>Loading</Spinner> :
                 <ul style={{ clear: "both", listStyle: "none" }}>
                     {
                         pets.map((pet) => (

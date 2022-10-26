@@ -11,7 +11,7 @@ export default function PetCard ({pet, adopters, handleAdopt}){
 
     let button =
     adopters[pet.id] === "0x0000000000000000000000000000000000000000" ? (
-      <Button color="primary" disabled={false} onClick={() => handleAdopt(pet.id)}>
+      <Button color="primary" disabled={false} onClick={async () => await handleAdopt(pet.id)}>
         Adopt
       </Button>
     ) : (
